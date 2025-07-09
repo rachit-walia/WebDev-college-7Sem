@@ -1,0 +1,13 @@
+#store {
+  margin: 0;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  padding: 2.5rem;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+}
