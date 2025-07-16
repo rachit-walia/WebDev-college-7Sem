@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debounced Product Search</title>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+
+    <script>
+        (function () {
+            console.log("Start Shopping");
+
+            const searchInput = document.getElementById('searchInput');
+            let debounceTimer; // private variable
+
+            function handleSearchInput(event) {
+                clearTimeout(debounceTimer);
+
+                debounceTimer = setTimeout(() => {
+                    const searchTerm = event.target.value;
+                    console.log("Optimized Search Input:", searchTerm);
+                    // You can call another internal function here if needed
+                }, 3000);
+            }
+
+            // Bind event inside the module
+            searchInput.addEventListener("input", handleSearchInput);
+
+        })(); // IIFE: Immediately Invoked
+    </script>
+</body>
+</html>
